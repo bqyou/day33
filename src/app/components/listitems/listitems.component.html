@@ -1,0 +1,27 @@
+<h2>List of Items</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Item
+            </th>
+            <th>
+                Qty
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of items; let idx =index" (click)="selected(idx)">
+            <td>
+                {{i.item}}
+            </td>
+            <td>
+                {{i.quantity}}
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        Count: {{itemCount}}
+    </tfoot>
+</table>
